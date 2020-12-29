@@ -1,0 +1,9 @@
+node_modules/
+
+tsconfig.tsbuildinfo
+
+lerna-debug.log
+
+/packages/*/node_modules/
+/packages/*/dist/
+/packages/*/build/

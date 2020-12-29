@@ -1,0 +1,22 @@
+{
+  "name": "@monorepo/ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve",
+    "build": "npm run compile && webpack --env production",
+    "clean": "rm -rf ./dist && rm -rf ./build && rm tsconfig.tsbuildinfo",
+    "watch": "tsc -b -w --preserveWatchOutput",
+    "compile": "tsc -b"
+  },
+  "dependencies": {
+    "@monorepo/diceroll": "1.0.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.0.0-beta.1",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

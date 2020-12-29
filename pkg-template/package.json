@@ -1,0 +1,22 @@
+{
+  "name": "@monorepo/mynewthing",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "start": "nodemon --inspect dist/index.js",
+    "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo",
+    "watch": "tsc -b -w --preserveWatchOutput"
+  },
+  "dependencies": {
+    "@monorepo/diceroll": "1.0.0"
+  },
+  "devDependencies": {
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "build",
+    "rootDir": "src",
+    "tsBuildInfoFile": "../../.build/ui.tsbuildinfo",
+
+    "module": "esnext",
+    "target": "ES2019",
+    "lib": [ "dom", "ES2019"]
+  },
+  "references": [
+    { "path":  "../diceroll" }
+  ],
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
+}
