@@ -19,5 +19,6 @@
     "@monorepo/diceroll": "1.0.0"
   },
   "devDependencies": {
+    "typescript": "^4.1.3"
   }
 }

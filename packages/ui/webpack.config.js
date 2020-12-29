@@ -1,6 +1,7 @@
+const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = function(env, argv) {
+module.exports = function (env, argv) {
   return {
     mode: env.production ? 'production' : 'development',
     devtool: env.production ? 'source-map' : 'eval',
@@ -12,14 +13,42 @@ module.exports = function(env, argv) {
     },
 
     entry: {
-      index: './build/index.js',
+      index: './src/index.tsx',
+    },
+
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          loader: 'esbuild-loader',
+          options: {
+            loader: 'tsx',
+            target: 'es2015',
+            tsconfigRaw: require('./tsconfig.json')
+          }
+        },
+      ]
+    },
+
+    optimization: {
+      minimize: env.production ? true : false,
+      minimizer: [
+        new ESBuildMinifyPlugin({
+          target: 'es2015'
+        })
+      ]
     },
 
     plugins: [
+      new ESBuildPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
       }),
     ],
+
+    resolve: {
+      extensions: [ '.tsx', '.ts', '.js' ],
+    },
 
     stats: {
       assetsSort: 'size',

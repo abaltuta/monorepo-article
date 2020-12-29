@@ -1,18 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "build",
+    "outDir": "dist",
     "rootDir": "src",
-    "noEmit": true,
 
-    "jsx": "react-jsx",
     "module": "esnext",
     "target": "ES2019",
     "lib": [ "dom", "ES2019"]
   },
   "references": [
-    { "path":  "../diceroll" },
-    { "path":  "../ui-components" }
+    { "path":  "../diceroll" }
   ],
   "include": ["src"],
   "exclude": [

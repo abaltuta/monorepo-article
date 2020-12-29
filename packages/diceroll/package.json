@@ -15,5 +15,6 @@
     "watch": "tsc -b -w --preserveWatchOutput"
   },
   "devDependencies": {
+    "typescript": "^4.1.3"
   }
 }
