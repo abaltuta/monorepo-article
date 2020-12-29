@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "tsc -b",
+    "lint": "eslint ./src --ext .ts,.tsx",
     "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo",
     "watch": "tsc -b -w --preserveWatchOutput"
   },

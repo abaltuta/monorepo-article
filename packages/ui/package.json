@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "start": "webpack serve",
-    "build": "npm run compile && webpack --env production",
-    "clean": "rm -rf ./dist && rm -rf ./build && rm tsconfig.tsbuildinfo",
+    "build": "yarn clean && yarn compile && webpack --env production",
+    "clean": "rm -rf ./dist && rm -rf ./build && rm -f tsconfig.tsbuildinfo",
     "watch": "tsc -b -w --preserveWatchOutput",
     "compile": "tsc -b"
   },

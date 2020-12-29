@@ -3,7 +3,6 @@
   "compilerOptions": {
     "outDir": "build",
     "rootDir": "src",
-    "tsBuildInfoFile": "../../.build/ui.tsbuildinfo",
 
     "module": "esnext",
     "target": "ES2019",
@@ -15,6 +14,7 @@
   "include": ["src"],
   "exclude": [
     "node_modules",
+    "src/**/*.spec.ts",
     "build",
     "dist"
   ]

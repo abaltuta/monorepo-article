@@ -11,6 +11,7 @@
   "scripts": {
     "build": "tsc -b",
     "start": "nodemon --inspect dist/index.js",
+    "lint": "eslint ./src --ext .ts,.tsx",
     "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo",
     "watch": "tsc -b -w --preserveWatchOutput"
   },
