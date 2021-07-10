@@ -1,4 +1,4 @@
-const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader')
+const { ESBuildMinifyPlugin } = require('esbuild-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function (env, argv) {
@@ -40,7 +40,6 @@ module.exports = function (env, argv) {
     },
 
     plugins: [
-      new ESBuildPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
       }),
